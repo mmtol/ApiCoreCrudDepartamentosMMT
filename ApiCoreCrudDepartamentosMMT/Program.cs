@@ -1,4 +1,7 @@
+using ApiCoreCrudDepartamentosMMT.Data;
+using ApiCoreCrudDepartamentosMMT.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +22,7 @@ var app = builder.Build();
 //{
 //}
 app.MapOpenApi();
-
+app.MapScalarApiReference();
 app.MapGet("/", () => Results.Redirect("/scalar"));
 
 app.UseHttpsRedirection();

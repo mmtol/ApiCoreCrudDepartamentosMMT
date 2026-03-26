@@ -43,7 +43,7 @@ namespace ApiCoreCrudDepartamentosMMT.Repositories
             await context.SaveChangesAsync();
         }
 
-        public async Task DeleteDepartamentoAsync(int idDepartamento, string nombre, string localidad)
+        public async Task DeleteDepartamentoAsync(int idDepartamento)
         {
             Departamento dept = await FindDepartamentoAsync(idDepartamento);
 
